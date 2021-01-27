@@ -1,5 +1,5 @@
-/myshop/__pycache__
+/book_store/__pycache__
 /books/__pycache__
-/books/migrations/__pycache__
+/books/migrations
 /orders/__pycache__
-/orders/migrations/__pycache__
+/orders/migrations

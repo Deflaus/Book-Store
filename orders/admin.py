@@ -4,6 +4,10 @@ from .models import Order
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
+    '''
+    Админ панель для модели Заказ книги
+    '''
+
     list_display = [
         'user',
         'book',

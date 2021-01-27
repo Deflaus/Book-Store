@@ -4,13 +4,21 @@ from books.models import Book, Author
 
 @admin.register(Author)
 class AuthorAdmin(admin.ModelAdmin):
+    '''
+    Админ панель для модели Автор
+    '''
+
     list_filter = [
-        'full_name',
+        'fio',
     ]
 
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
+    '''
+    Админ панель для модели Книга
+    '''
+
     list_display = [
         'author',
         'title',

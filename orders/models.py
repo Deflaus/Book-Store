@@ -4,6 +4,10 @@ from books.models import Book
 
 
 class Order(models.Model):
+    '''
+    Модель Заказ книги
+    '''
+    
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     book = models.ForeignKey(Book, on_delete=models.SET_NULL, null=True)
     phone_number = models.CharField(max_length=11)

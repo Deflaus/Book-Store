@@ -2,17 +2,25 @@ from django.db import models
 
 
 class Author(models.Model):
-    full_name = models.CharField(max_length=100)
+    '''
+    Модель Автора
+    '''
+
+    fio = models.CharField(max_length=100)
 
     class Meta:
-        ordering = ('full_name',)
+        ordering = ('fio',)
 
     def __str__(self):
-        return self.full_name
+        return self.fio
 
 
 class Book(models.Model):
-    author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True)
+    '''
+    Модель Книга
+    '''
+
+    author = models.ForeignKey(Author, related_name='books', on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
